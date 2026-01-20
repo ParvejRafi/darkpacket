@@ -291,46 +291,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Handle contact form submission
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        // Simple form validation
-        if (!name || !email || !subject || !message) {
-            alert('Please fill out all fields');
-            return;
-        }
-
-        // Here you would normally send the form data to a server
-        // For this demo, we'll just show a success message
-
-        const formData = {
-            name,
-            email,
-            subject,
-            message
-        };
-
-        console.log('Form submitted:', formData);
-
-        // Show success message
-        const successMessage = document.createElement('div');
-        successMessage.className = 'success-message';
-        successMessage.innerHTML = `
-            <i class="fas fa-check-circle"></i>
-            <p>Thank you for your message, ${name}! I'll get back to you soon.</p>
-        `;
-
-        // Replace form with success message
-        contactForm.innerHTML = '';
-        contactForm.appendChild(successMessage);
-    });
-}
+// Handle contact form submission
+// Removed custom JS handler to allow Formspree native submission
 
 // Add smooth scrolling to all links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -121,13 +121,14 @@
                                 <i class="fas fa-shield-alt"></i>
                             </a>
                         </div>
-                    <!-- Resume Button -->
-                    <div class="resume-container" style="margin-top: 1.5rem;">
-                        <a href="assets/PARVEJ_RAFI_RESUME.pdf" download="PARVEJ_RAFI_RESUME.pdf" class="resume-btn">
-                            <i class="fas fa-download"></i>
-                            Download Resume
-                        </a>
-                    </div>
+                        <!-- Resume Button -->
+                        <div class="resume-container" style="margin-top: 1.5rem;">
+                            <a href="assets/PARVEJ_RAFI_RESUME.pdf" download="PARVEJ_RAFI_RESUME.pdf"
+                                class="resume-btn">
+                                <i class="fas fa-download"></i>
+                                Download Resume
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1132,18 +1133,18 @@
                     </div>
                 </div>
                 <div class="contact-form-container">
-                    <form id="contact-form">
+                    <form id="contact-form" action="https://formspree.io/f/xvzzrplo" method="POST">
                         <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" placeholder="Subject" required>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" placeholder="Your Message" required></textarea>
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                         </div>
                         <button type="submit" class="btn primary-btn">Send Message</button>
                     </form>
