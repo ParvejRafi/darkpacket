@@ -340,89 +340,34 @@ nav {
         inset 0 0 60px rgba(0, 238, 255, 0.03);
 }
 
-.hero-text-wrapper::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, var(--accent-color), var(--accent-color-2), transparent);
-    animation: borderFlow 3s linear infinite;
-}
-
-.hero-text-wrapper::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(0, 238, 255, 0.05) 0%, transparent 70%);
-    animation: rotate 20s linear infinite;
-    pointer-events: none;
-}
+/* Professional hero text styling - simplified */
 
 .tag-line {
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
     margin-bottom: 1rem;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.bracket {
-    color: var(--accent-color);
-    font-weight: bold;
-    text-shadow: 0 0 10px var(--accent-color);
+.tag-line i {
+    font-size: 1rem;
 }
 
 .tag-text {
     color: var(--accent-color-2);
-    margin: 0 0.5rem;
     font-weight: 600;
 }
 
 .hero-text h1 {
     margin-bottom: 1rem;
+    font-size: 3.5r0.5rem;
     font-size: 3.5rem;
-    background: linear-gradient(135deg, #00eeff 0%, #00ff66 50%, #00eeff 100%);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradientShift 3s ease infinite, fadeInUp 0.8s ease-out 0.4s backwards;
-    position: relative;
-    filter: drop-shadow(0 0 30px rgba(0, 238, 255, 0.5));
-}
-
-.glitch-text {
-    position: relative;
-}
-
-.glitch-text:hover::before,
-.glitch-text:hover::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #00eeff 0%, #00ff66 50%, #00eeff 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.glitch-text:hover::before {
-    animation: glitchTop 0.3s infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
-}
-
-.glitch-text:hover::after {
-    animation: glitchBottom 0.3s infinite;
-    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
-}
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.5px
 
 .role-container {
     margin-bottom: 1.5rem;
@@ -457,37 +402,12 @@ nav {
     font-weight: 300;
 }
 
-.description-box {
-    background: rgba(0, 238, 255, 0.05);
-    border-left: 4px solid var(--accent-color);
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    position: relative;
-    display: flex;
-    gap: 1rem;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 0.8s forwards;
-}
-
-.desc-icon {
+.subtitle {
     font-size: 1.5rem;
+    font-weight: 600;
     color: var(--accent-color);
-    min-width: 30px;
-}
-
-.hero-text p {
-    color: var(--text-secondary);
-    line-height: 1.8;
-    margin: 0;
-}
-
-.stats-row {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 1s forwards;
+    margin-bottom: 1.5rem;
+    display: blocknUp 0.8s ease-out 1s forwards;
     flex-wrap: wrap;
 }
 
@@ -529,8 +449,7 @@ nav {
     margin-bottom: 2rem;
     display: flex;
     gap: 1rem;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out 1.2s forwards;
+    flex-wrap: wrap;
 }
 
 .cta-buttons .btn {
@@ -554,8 +473,7 @@ nav {
 
 .primary-btn {
     background: linear-gradient(135deg, var(--accent-color), var(--accent-color-2));
-    box-shadow: 0 0 30px rgba(0, 238, 255, 0.4);
-    animation: pulse-glow 2s ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(0, 238, 255, 0.3);
 }
 
 .primary-btn::before {
@@ -589,8 +507,7 @@ nav {
 
 .social-section {
     opacity: 0;
-    animation: fadeInUp 0.8s ease-out 1.4s forwards;
-}
+    margin-top: 2rem
 
 .social-label {
     font-size: 0.9rem;
