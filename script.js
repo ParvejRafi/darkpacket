@@ -8,6 +8,8 @@ const moonIcon = document.querySelector('.fa-moon');
 const sunIcon = document.querySelector('.fa-sun');
 const contactForm = document.getElementById('contact-form');
 
+// Portfolio Enhancement - Performance & Features Update v3.0
+
 // Advanced Network Animation
 const networkCanvas = document.getElementById('networkCanvas');
 const particleCanvas = document.getElementById('particleCanvas');

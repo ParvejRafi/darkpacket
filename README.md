@@ -10,7 +10,9 @@ This website showcases my professional journey, technical skills, certifications
 
 ## 🚀 Live Website
 
-Visit the portfolio: [https://parvejarafi.github.io/cyberrafi.github.io](https://parvejarafi.github.io/cyberrafi.github.io)
+Visit the portfolio: [https://AdityaBhatt3010.github.io](https://AdityaBhatt3010.github.io)
+
+**Latest Update**: Enhanced UI/UX with improved animations, better SEO metadata, and optimized performance.
 
 ---
 
@@ -48,6 +50,30 @@ Visit the portfolio: [https://parvejarafi.github.io/cyberrafi.github.io](https:/
 - 🎓 Education
 - 📜 Certifications
 - ✍️ Writeups & Articles (Medium publications)
+- 📧 Contact Form with validation
+
+---
+
+## 📝 Recent Updates (v3.0)
+
+- ✨ Enhanced visual effects and animations
+- 🔍 Improved SEO with meta tags
+- 🎨 Refined cyberpunk aesthetic
+- ⚡ Performance optimizations
+- 📱 Better mobile responsiveness
+- 🔗 Fixed all social media links
+
+---
+
+## 🔧 How to Contribute
+
+If you'd like to suggest improvements or report issues, feel free to create a pull request or open an issue!
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 - 📚 Trainings & Courses
 - 📝 Blog Articles
 - 📞 Contact Form
