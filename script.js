@@ -1,124 +1,225 @@
-// Professional Portfolio v4.0 - Simplified JavaScript
-// No complex animations, focus on functionality and performance
+/**
+ * CyberRafi Portfolio v5.0 — Professional JavaScript
+ * Handles: navigation, scroll effects, active states, form, reveal animations
+ */
 
-// ==================== DOM Elements ====================
-const header = document.querySelector('header');
-const navLinks = document.querySelector('.nav-links');
-const hamburger = document.querySelector('.hamburger');
-const navLinksItems = document.querySelectorAll('.nav-links li');
-const themeToggle = document.querySelector('.theme-toggle');
+// ==================== Elements ====================
+const header      = document.getElementById('main-header');
+const hamburger   = document.getElementById('hamburger');
+const navLinks    = document.getElementById('nav-links');
+const navItems    = document.querySelectorAll('.nav-links li');
+const backToTop   = document.getElementById('back-to-top');
 const contactForm = document.getElementById('contact-form');
 
-// ==================== Mobile Menu Toggle ====================
+// ==================== Mobile Menu ====================
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
+    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
 });
 
-navLinksItems.forEach(item => {
+navItems.forEach(item => {
     item.addEventListener('click', () => {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
+        document.body.style.overflow = '';
     });
 });
 
-// ==================== Header Background on Scroll ====================
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.style.background = 'rgba(0, 0, 0, 0.95)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 238, 255, 0.1)';
-    } else {
-        header.style.background = 'transparent';
-        header.style.boxShadow = 'none';
+// Close menu on outside click
+document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = '';
     }
 });
 
-// ==================== Smooth Scrolling ====================
+// ==================== Scroll Handler ====================
+let ticking = false;
+
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            handleScroll();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+function handleScroll() {
+    const scrollY = window.scrollY;
+
+    // Sticky header
+    if (scrollY > 40) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+
+    // Back to top visibility
+    if (scrollY > 400) {
+        backToTop.classList.add('visible');
+    } else {
+        backToTop.classList.remove('visible');
+    }
+
+    // Active nav link
+    updateActiveNav();
+
+    // Reveal animations
+    revealElements();
+}
+
+// ==================== Smooth Scroll ====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
+        const href = anchor.getAttribute('href');
+        if (href === '#') return;
         e.preventDefault();
-        const target = document.querySelector(anchor.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            const offset = header.offsetHeight + 16;
+            const top = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
         }
     });
 });
 
-// ==================== Active Navigation Link ====================
-window.addEventListener('scroll', () => {
-    let current = '';
+// ==================== Active Nav ====================
+function updateActiveNav() {
     const sections = document.querySelectorAll('section[id]');
-    
+    let current = '';
+
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 200) {
+        const sectionTop = section.offsetTop - header.offsetHeight - 80;
+        if (window.scrollY >= sectionTop) {
             current = section.getAttribute('id');
         }
     });
-    
-    navLinksItems.forEach(item => {
+
+    navItems.forEach(item => {
         item.classList.remove('active');
-        if (item.querySelector(`a[href="#${current}"]`)) {
+        const link = item.querySelector('a');
+        if (link && link.getAttribute('href') === `#${current}`) {
             item.classList.add('active');
         }
     });
-});
+}
 
-// ==================== Contact Form Handling ====================
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Simple form validation
-        if (name.trim() === '' || email.trim() === '' || subject.trim() === '' || message.trim() === '') {
-            alert('Please fill in all fields');
-            return;
-        }
-        
-        // Email validation
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
-        
-        // Simulate form submission
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
-        submitBtn.disabled = true;
-        
-        // Here you would normally send the data to a server
-        setTimeout(() => {
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
-            submitBtn.textContent = originalText;
-            submitBtn.disabled = false;
-        }, 1500);
+// ==================== Back To Top ====================
+if (backToTop) {
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
 
-// ==================== Skill Items Hover Effect ====================
-const skillItems = document.querySelectorAll('.skill-item');
-skillItems.forEach(item => {
-    item.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-5px)';
-        this.style.boxShadow = '0 10px 30px rgba(0, 238, 255, 0.3)';
+// ==================== Scroll Reveal ====================
+function revealElements() {
+    const reveals = document.querySelectorAll('.reveal');
+    reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (rect.top < windowHeight - 60) {
+            el.classList.add('visible');
+        }
     });
-    
-    item.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = '';
+}
+
+// Auto-add reveal class to section children
+function initReveal() {
+    const targets = document.querySelectorAll(
+        '.project-card, .certification-card, .writeup-card, .skill-category, ' +
+        '.timeline-item, .expertise-card, .contact-info-item, .stat-item'
+    );
+    targets.forEach((el, i) => {
+        el.classList.add('reveal');
+        el.style.transitionDelay = `${(i % 4) * 0.08}s`;
     });
-});
+    revealElements();
+}
+
+// ==================== Contact Form ====================
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const name    = document.getElementById('name').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !subject || !message) {
+            showNotification('Please fill in all fields.', 'error');
+            return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showNotification('Please enter a valid email address.', 'error');
+            return;
+        }
+
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalContent = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> <span>Sending...</span>';
+        submitBtn.disabled = true;
+
+        await new Promise(resolve => setTimeout(resolve, 1600));
+
+        showNotification('Message sent! I\'ll get back to you soon. 🎉', 'success');
+        contactForm.reset();
+        submitBtn.innerHTML = originalContent;
+        submitBtn.disabled = false;
+    });
+}
+
+// ==================== Notification Toast ====================
+function showNotification(message, type = 'success') {
+    const existing = document.querySelector('.toast-notification');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'toast-notification';
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(20px);
+        background: ${type === 'success' ? 'linear-gradient(135deg, hsl(220,100%,65%), hsl(265,90%,70%))' : 'linear-gradient(135deg, hsl(0,80%,55%), hsl(20,90%,50%))'};
+        color: #fff;
+        padding: 0.85rem 2rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        z-index: 9999;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        transition: all 0.35s cubic-bezier(0.34,1.56,0.64,1);
+        opacity: 0;
+        pointer-events: none;
+        font-family: 'Inter', sans-serif;
+        white-space: nowrap;
+    `;
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(() => {
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateX(-50%) translateY(0)';
+    });
+
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(10px)';
+        setTimeout(() => toast.remove(), 400);
+    }, 3500);
+}
 
 // ==================== Initialize ====================
-console.log('✨ Professional Portfolio v4.0 loaded successfully!');
+document.addEventListener('DOMContentLoaded', () => {
+    initReveal();
+    updateActiveNav();
+    handleScroll();
+    console.log('✨ CyberRafi Portfolio v5.0 loaded successfully!');
+});

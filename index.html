@@ -3,33 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cybersecurity portfolio showcasing penetration testing skills, CTF challenges, and technical projects.">
-    <meta name="keywords" content="penetration testing, cybersecurity, CTF, hacking">
-    <title>MD PARVEJ AHMED RAFI | Penetration Tester & Cybersecurity Specialist</title>
-    <link rel="stylesheet" href="style.css?v=4.0">
+    <meta name="description" content="MD Parvej Ahmed Rafi — Cybersecurity portfolio showcasing penetration testing skills, CTF challenges, bug bounty research, and technical projects.">
+    <meta name="keywords" content="penetration testing, cybersecurity, CTF, bug bounty, OSINT, hacking, security researcher">
+    <meta name="author" content="MD Parvej Ahmed Rafi">
+    <meta property="og:title" content="MD Parvej Ahmed Rafi | Penetration Tester & Cybersecurity Specialist">
+    <meta property="og:description" content="Cybersecurity professional specializing in penetration testing, vulnerability assessment, and offensive security.">
+    <meta property="og:type" content="website">
+    <title>MD PARVEJ AHMED RAFI | Penetration Tester &amp; Cybersecurity Specialist</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header>
+
+    <!-- ==============================
+         HEADER / NAVIGATION
+    =============================== -->
+    <header id="main-header">
         <div class="container">
             <nav>
                 <div class="logo">
-                    <a href="#home"><span>&lt;</span> PR <span>/&gt;</span></a>
+                    <a href="#home">
+                        <div class="logo-icon">PR</div>
+                        <span class="logo-text">Parvej<span>Rafi</span></span>
+                    </a>
                 </div>
-                <ul class="nav-links">
+
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#education">Education</a></li>
-                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#certifications">Certs</a></li>
                     <li><a href="#writeups">Writeups</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger">
+
+                <div class="nav-cta">
+                    <a href="assets/PARVEJ_RAFI_RESUME.pdf" target="_blank" class="btn secondary-btn" download>
+                        <i class="fas fa-download"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
+
+                <div class="hamburger" id="hamburger" aria-label="Toggle menu">
                     <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
@@ -38,84 +57,106 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ==============================
+         HERO SECTION
+    =============================== -->
     <section id="home" class="hero">
+        <div class="bg-grid"></div>
         <div class="container">
             <div class="hero-content">
+                <!-- Left: Hero Text -->
                 <div class="hero-text">
                     <div class="hero-text-wrapper">
-                        <div class="tag-line">
+                        <div class="hero-badge">
+                            <span class="available-dot"></span>
                             <i class="fas fa-shield-alt"></i>
-                            <span class="tag-text">Cybersecurity Professional</span>
+                            <span>Cybersecurity Professional</span>
                         </div>
-                        
-                        <h1>MD Parvej Ahmed Rafi</h1>
-                        
-                        <h2 class="subtitle">Penetration Tester & Cybersecurity Specialist</h2>
-                        
-                        <div class="description-box">
-                            <p>Dedicated cybersecurity professional specializing in penetration testing, vulnerability assessment, and offensive security. Experienced in identifying and exploiting vulnerabilities using industry-standard tools and methodologies. Passionate about securing systems and helping organizations strengthen their security posture.</p>
-                        </div>
-                        
+
+                        <h1 class="hero-title">MD Parvej Ahmed Rafi</h1>
+
+                        <p class="hero-subtitle">Penetration Tester &amp; Cybersecurity Specialist</p>
+
+                        <p class="hero-description">
+                            Dedicated cybersecurity professional specializing in penetration testing, vulnerability assessment, and offensive security. Experienced in identifying and exploiting vulnerabilities using industry-standard tools and methodologies. Passionate about securing systems and helping organizations strengthen their security posture.
+                        </p>
+
                         <div class="stats-row">
                             <div class="stat-item">
                                 <div class="stat-value">10+</div>
-                                <div class="stat-label">CTF Challenges Solved</div>
+                                <div class="stat-label">CTF Solved</div>
                             </div>
                             <div class="stat-item">
                                 <div class="stat-value">9</div>
                                 <div class="stat-label">Certifications</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-value">3.58/4.0</div>
-                                <div class="stat-label">CGPA</div>
+                                <div class="stat-value">3.58</div>
+                                <div class="stat-label">CGPA / 4.0</div>
                             </div>
                         </div>
-                        
+
                         <div class="cta-buttons">
                             <a href="#contact" class="btn primary-btn">
                                 <span class="btn-text">Contact Me</span>
                                 <span class="btn-icon"><i class="fas fa-envelope"></i></span>
                             </a>
-                            <a href="assets/PARVEJ_RAFI_RESUME.pdf" target="_blank" class="btn secondary-btn" download>
-                                <span class="btn-text">Download Resume</span>
-                                <span class="btn-icon"><i class="fas fa-download"></i></span>
-                            </a>
                             <a href="#projects" class="btn secondary-btn">
                                 <span class="btn-text">View My Work</span>
                                 <span class="btn-icon"><i class="fas fa-briefcase"></i></span>
                             </a>
+                            <a href="assets/PARVEJ_RAFI_RESUME.pdf" target="_blank" class="btn secondary-btn" download>
+                                <span class="btn-text">Resume</span>
+                                <span class="btn-icon"><i class="fas fa-download"></i></span>
+                            </a>
                         </div>
-                        
+
                         <div class="social-section">
-                            <div class="social-label">Follow Me</div>
+                            <div class="social-label">Find me on</div>
                             <div class="social-icons">
-                                <a href="https://www.linkedin.com/in/parvej-rafi-ba43a3301/" target="_blank" class="social-link linkedin" title="LinkedIn">
+                                <a href="https://www.linkedin.com/in/parvej-rafi-ba43a3301/" target="_blank" class="social-link" title="LinkedIn" id="social-linkedin">
                                     <i class="fab fa-linkedin"></i>
                                 </a>
-                                <a href="https://github.com/ParvejRafi" target="_blank" class="social-link github" title="GitHub">
+                                <a href="https://github.com/ParvejRafi" target="_blank" class="social-link" title="GitHub" id="social-github">
                                     <i class="fab fa-github"></i>
                                 </a>
-                                <a href="https://tryhackme.com/p/cyberhackrafi" target="_blank" class="social-link tryhackme" title="TryHackMe">
+                                <a href="https://tryhackme.com/p/cyberhackrafi" target="_blank" class="social-link" title="TryHackMe" id="social-tryhackme">
                                     <i class="fas fa-shield-alt"></i>
                                 </a>
-                                <a href="https://medium.com/@cyberhackrafi" target="_blank" class="social-link medium" title="Medium">
+                                <a href="https://medium.com/@cyberhackrafi" target="_blank" class="social-link" title="Medium" id="social-medium">
                                     <i class="fab fa-medium"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Right: Profile Card -->
                 <div class="hero-image">
                     <div class="profile-card">
-                        <div class="profile-card-content">
-                            <div class="profile-icon">
-                                <i class="fas fa-user-shield"></i>
+                        <div class="profile-card-glow"></div>
+                        <div class="profile-card-inner">
+                            <div class="profile-avatar-wrap">
+                                <div class="avatar-circle">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <div class="available-badge">
+                                    <span class="dot"></span>
+                                    Open to Work
+                                </div>
                             </div>
-                            <h3>Cybersecurity Expert</h3>
-                            <p>Penetration Testing | Vulnerability Assessment | OSINT | Bug Bounty</p>
+                            <h3>MD Parvej Ahmed Rafi</h3>
+                            <p class="role">// Security Researcher</p>
+                            <div class="profile-tags">
+                                <span class="tag">Penetration Testing</span>
+                                <span class="tag">VAPT</span>
+                                <span class="tag">OSINT</span>
+                                <span class="tag">Bug Bounty</span>
+                                <span class="tag">CTF Player</span>
+                            </div>
                             <div class="profile-badge">
-                                <i class="fas fa-star"></i> Available for Freelance Projects
+                                <i class="fas fa-star"></i>
+                                Available for Freelance Projects
                             </div>
                         </div>
                     </div>
@@ -124,71 +165,76 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ==============================
+         ABOUT SECTION
+    =============================== -->
     <section id="about" class="about">
+        <div class="bg-mesh"></div>
         <div class="container">
             <div class="section-header">
+                <div class="section-tag"><i class="fas fa-user"></i> About</div>
                 <h2>About Me</h2>
                 <div class="underline"></div>
             </div>
-            
+
             <div class="about-main-content">
                 <!-- Left: Profile Card -->
                 <div class="about-profile-card">
-                    <div class="profile-card-inner">
+                    <div class="profile-card-main">
                         <div class="profile-header">
-                            <div class="profile-avatar">
-                                <div class="avatar-circle">
-                                    <i class="fas fa-user-shield"></i>
+                            <div class="profile-avatar-about">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <h3>MD Parvej Ahmed Rafi</h3>
+                            <p class="role">// Cybersecurity Specialist</p>
+                            <div class="status-pill">
+                                <span class="dot"></span>
+                                Available for Work
+                            </div>
+                        </div>
+
+                        <div class="profile-stats">
+                            <div class="profile-stat">
+                                <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="stat-detail">
+                                    <span class="label">Education</span>
+                                    <span class="value">B.Sc. Computer Science</span>
                                 </div>
-                                <div class="status-indicator">
-                                    <span class="status-dot"></span>
-                                    <span class="status-text">Available for Work</span>
+                            </div>
+                            <div class="profile-stat">
+                                <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                                <div class="stat-detail">
+                                    <span class="label">Achievement</span>
+                                    <span class="value">Dean's List 2024 &amp; 2025</span>
+                                </div>
+                            </div>
+                            <div class="profile-stat">
+                                <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <div class="stat-detail">
+                                    <span class="label">Location</span>
+                                    <span class="value">Alor Setar, Malaysia</span>
+                                </div>
+                            </div>
+                            <div class="profile-stat">
+                                <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                                <div class="stat-detail">
+                                    <span class="label">CGPA</span>
+                                    <span class="value">3.58 / 4.00</span>
                                 </div>
                             </div>
                         </div>
-                        
-                        <div class="profile-info">
-                            <h3>MD Parvej Ahmed Rafi</h3>
-                            <p class="profile-role">Cybersecurity Specialist</p>
-                            
-                            <div class="profile-stats">
-                                <div class="profile-stat">
-                                    <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
-                                    <div class="stat-detail">
-                                        <span class="stat-label">Education</span>
-                                        <span class="stat-value">B.Sc. Computer Science</span>
-                                    </div>
-                                </div>
-                                <div class="profile-stat">
-                                    <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-                                    <div class="stat-detail">
-                                        <span class="stat-label">Achievement</span>
-                                        <span class="stat-value">Dean's List 2024 & 2025</span>
-                                    </div>
-                                </div>
-                                <div class="profile-stat">
-                                    <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
-                                    <div class="stat-detail">
-                                        <span class="stat-label">Location</span>
-                                        <span class="stat-value">Alor Setar, Malaysia</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="quick-contact">
-                                <a href="mailto:mdparvej.ahmedrafi@student.aiu.edu.my" class="contact-btn">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email Me</span>
-                                </a>
-                            </div>
+
+                        <div class="quick-contact">
+                            <a href="mailto:mdparvej.ahmedrafi@student.aiu.edu.my" class="contact-btn">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email Me</span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Right: Content -->
                 <div class="about-content-right">
-                    <!-- Bio Section -->
                     <div class="bio-section">
                         <div class="bio-header">
                             <i class="fas fa-user-circle"></i>
@@ -197,37 +243,25 @@
                         <p>I am a <span class="highlight">passionate cybersecurity student</span> specializing in penetration testing and vulnerability assessment. My expertise spans across offensive security, web application testing, network security, and OSINT techniques.</p>
                         <p>Currently pursuing my <span class="highlight">B.Sc. in Computer Science</span> with a focus on Cybersecurity at Al Bukhary International University, Malaysia, I am constantly expanding my knowledge through hands-on projects, CTF challenges, and bug bounty programs.</p>
                     </div>
-                    
-                    <!-- Expertise Areas -->
+
                     <div class="expertise-grid">
                         <div class="expertise-card">
-                            <div class="expertise-icon">
-                                <i class="fas fa-bug"></i>
-                            </div>
+                            <div class="expertise-icon"><i class="fas fa-bug"></i></div>
                             <h4>Penetration Testing</h4>
                             <p>Expert in identifying and exploiting vulnerabilities in web applications and networks</p>
                         </div>
-                        
                         <div class="expertise-card">
-                            <div class="expertise-icon">
-                                <i class="fas fa-shield-virus"></i>
-                            </div>
+                            <div class="expertise-icon"><i class="fas fa-shield-virus"></i></div>
                             <h4>VAPT</h4>
                             <p>Comprehensive vulnerability assessment and penetration testing services</p>
                         </div>
-                        
                         <div class="expertise-card">
-                            <div class="expertise-icon">
-                                <i class="fas fa-search"></i>
-                            </div>
+                            <div class="expertise-icon"><i class="fas fa-search"></i></div>
                             <h4>OSINT</h4>
                             <p>Advanced open-source intelligence gathering and reconnaissance techniques</p>
                         </div>
-                        
                         <div class="expertise-card">
-                            <div class="expertise-icon">
-                                <i class="fas fa-trophy"></i>
-                            </div>
+                            <div class="expertise-icon"><i class="fas fa-trophy"></i></div>
                             <h4>Bug Bounty</h4>
                             <p>Active researcher on platforms like YesWeHack and HackerOne</p>
                         </div>
@@ -237,75 +271,85 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ==============================
+         SKILLS SECTION
+    =============================== -->
     <section id="skills" class="skills">
+        <div class="bg-grid"></div>
         <div class="container">
             <div class="section-header">
+                <div class="section-tag"><i class="fas fa-code"></i> Skills</div>
                 <h2>My Skills</h2>
                 <div class="underline"></div>
+                <p>Tools, technologies and techniques I use in my security research</p>
             </div>
             <div class="skills-container">
                 <div class="skill-category">
                     <h3>Pentesting Tools</h3>
                     <div class="skills-grid">
-                        <div class="skill-item"><span>Kali Linux</span></div>
-                        <div class="skill-item"><span>Nmap</span></div>
-                        <div class="skill-item"><span>Burp Suite</span></div>
-                        <div class="skill-item"><span>Metasploit</span></div>
-                        <div class="skill-item"><span>Wireshark</span></div>
-                        <div class="skill-item"><span>Hydra</span></div>
-                        <div class="skill-item"><span>Gobuster</span></div>
-                        <div class="skill-item"><span>SQLmap</span></div>
-                        <div class="skill-item"><span>Nikto</span></div>
-                        <div class="skill-item"><span>Autopsy</span></div>
-                        <div class="skill-item"><span>Flare VM</span></div>
+                        <div class="skill-item">Kali Linux</div>
+                        <div class="skill-item">Nmap</div>
+                        <div class="skill-item">Burp Suite</div>
+                        <div class="skill-item">Metasploit</div>
+                        <div class="skill-item">Wireshark</div>
+                        <div class="skill-item">Hydra</div>
+                        <div class="skill-item">Gobuster</div>
+                        <div class="skill-item">SQLmap</div>
+                        <div class="skill-item">Nikto</div>
+                        <div class="skill-item">Autopsy</div>
+                        <div class="skill-item">Flare VM</div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Programming & Scripting</h3>
+                    <h3>Programming &amp; Scripting</h3>
                     <div class="skills-grid">
-                        <div class="skill-item"><span>Python</span></div>
-                        <div class="skill-item"><span>SQL</span></div>
-                        <div class="skill-item"><span>Java</span></div>
-                        <div class="skill-item"><span>C</span></div>
-                        <div class="skill-item"><span>HTML/CSS</span></div>
-                        <div class="skill-item"><span>JavaScript</span></div>
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">SQL</div>
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">C</div>
+                        <div class="skill-item">HTML/CSS</div>
+                        <div class="skill-item">JavaScript</div>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Cybersecurity Skills</h3>
                     <div class="skills-grid">
-                        <div class="skill-item"><span>Vulnerability Assessment</span></div>
-                        <div class="skill-item"><span>Web Pentesting</span></div>
-                        <div class="skill-item"><span>Network Pentesting</span></div>
-                        <div class="skill-item"><span>App Pentesting</span></div>
-                        <div class="skill-item"><span>OSINT</span></div>
-                        <div class="skill-item"><span>CTF</span></div>
-                        <div class="skill-item"><span>Bug Bounty</span></div>
-                        <div class="skill-item"><span>Digital Forensics</span></div>
-                        <div class="skill-item"><span>Malware Analysis</span></div>
-                        <div class="skill-item"><span>Incident Response</span></div>
+                        <div class="skill-item">Vulnerability Assessment</div>
+                        <div class="skill-item">Web Pentesting</div>
+                        <div class="skill-item">Network Pentesting</div>
+                        <div class="skill-item">App Pentesting</div>
+                        <div class="skill-item">OSINT</div>
+                        <div class="skill-item">CTF</div>
+                        <div class="skill-item">Bug Bounty</div>
+                        <div class="skill-item">Digital Forensics</div>
+                        <div class="skill-item">Malware Analysis</div>
+                        <div class="skill-item">Incident Response</div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Networking & Systems</h3>
+                    <h3>Networking &amp; Systems</h3>
                     <div class="skills-grid">
-                        <div class="skill-item"><span>TCP/IP</span></div>
-                        <div class="skill-item"><span>OSI Model</span></div>
-                        <div class="skill-item"><span>Windows</span></div>
-                        <div class="skill-item"><span>MySQL</span></div>
+                        <div class="skill-item">TCP/IP</div>
+                        <div class="skill-item">OSI Model</div>
+                        <div class="skill-item">Windows</div>
+                        <div class="skill-item">MySQL</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ==============================
+         PROJECTS SECTION
+    =============================== -->
     <section id="projects" class="projects">
+        <div class="bg-mesh"></div>
         <div class="container">
             <div class="section-header">
+                <div class="section-tag"><i class="fas fa-folder-open"></i> Projects</div>
                 <h2>Projects</h2>
                 <div class="underline"></div>
+                <p>Hands-on projects combining security research with full-stack development</p>
             </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
@@ -313,7 +357,9 @@
                     <div class="project-header">
                         <h3>Hospital Management System (HMS)</h3>
                         <div class="project-links">
-                            <a href="https://github.com/ParvejRafi/Hospital-Management-System" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/ParvejRafi/Hospital-Management-System" target="_blank" title="View on GitHub" id="proj1-github">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -336,7 +382,9 @@
                     <div class="project-header">
                         <h3>AlBukhary Zero Hunger Platform</h3>
                         <div class="project-links">
-                            <a href="https://github.com/ParvejRafi/Albukhary-zero-hunger-platform" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/ParvejRafi/Albukhary-zero-hunger-platform" target="_blank" title="View on GitHub" id="proj2-github">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -358,9 +406,11 @@
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>SecureCrop: Soil Data Secure Crop Recommendation System</h3>
+                        <h3>SecureCrop: Soil Data Secure Crop Recommendation</h3>
                         <div class="project-links">
-                            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="#" target="_blank" title="View on GitHub" id="proj3-github">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -383,7 +433,9 @@
                     <div class="project-header">
                         <h3>Cyber Awareness Simulation</h3>
                         <div class="project-links">
-                            <a href="https://github.com/ParvejRafi/CyberAwarnessSimulation" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/ParvejRafi/CyberAwarnessSimulation" target="_blank" title="View on GitHub" id="proj4-github">
+                                <i class="fab fa-github"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -405,21 +457,23 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ==============================
+         EXPERIENCE SECTION
+    =============================== -->
     <section id="experience" class="experience">
+        <div class="bg-grid"></div>
         <div class="container">
             <div class="section-header">
+                <div class="section-tag"><i class="fas fa-briefcase"></i> Experience</div>
                 <h2>Experience</h2>
                 <div class="underline"></div>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-bug"></i>
-                    </div>
+                    <div class="timeline-icon"><i class="fas fa-bug"></i></div>
                     <div class="timeline-content">
                         <h3>Bug Bounty Hunter (Independent)</h3>
-                        <h4>YesWeHack, HackerOne & Other Platforms</h4>
+                        <h4>YesWeHack, HackerOne &amp; Other Platforms</h4>
                         <span class="timeline-date">2024 – Present</span>
                         <ul>
                             <li>Actively identifying and reporting security vulnerabilities across multiple bug bounty platforms including YesWeHack, HackerOne, and other leading programs</li>
@@ -432,9 +486,7 @@
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
+                    <div class="timeline-icon"><i class="fas fa-laptop-code"></i></div>
                     <div class="timeline-content">
                         <h3>Cybersecurity Intern (Remote)</h3>
                         <h4>Digital Empowerment Network</h4>
@@ -451,25 +503,27 @@
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- ==============================
+         EDUCATION SECTION
+    =============================== -->
     <section id="education" class="education">
+        <div class="bg-mesh"></div>
         <div class="container">
             <div class="section-header">
+                <div class="section-tag"><i class="fas fa-graduation-cap"></i> Education</div>
                 <h2>Education</h2>
                 <div class="underline"></div>
             </div>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                    <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
                     <div class="timeline-content">
                         <h3>B.Sc. Computer Science (Cybersecurity)</h3>
                         <h4>Al Bukhary International University, Malaysia</h4>
                         <span class="timeline-date">October 2023 – October 2026</span>
                         <p>CGPA: 3.58 / 4.00</p>
                         <div class="achievement-badge">
-                            <i class="fas fa-trophy"></i> Dean's List 2024 & 2025
+                            <i class="fas fa-trophy"></i> Dean's List 2024 &amp; 2025
                         </div>
                     </div>
                 </div>
@@ -477,19 +531,24 @@
         </div>
     </section>
 
-    <!-- Certifications Section -->
+    <!-- ==============================
+         CERTIFICATIONS SECTION
+    =============================== -->
     <section id="certifications" class="certifications">
+        <div class="bg-grid"></div>
         <div class="container">
             <div class="section-header">
+                <div class="section-tag"><i class="fas fa-certificate"></i> Certifications</div>
                 <h2>Certifications</h2>
                 <div class="underline"></div>
+                <p>Industry-recognized credentials validating my cybersecurity expertise</p>
             </div>
             <div class="certifications-grid">
                 <div class="certification-card">
                     <div class="cert-image-container">
                         <img src="assets/eJPT.png" alt="eJPT Junior Penetration Tester Certificate" class="cert-image">
                         <div class="cert-overlay">
-                            <a href="#" target="_blank" class="cert-verify-btn">
+                            <a href="#" target="_blank" class="cert-verify-btn" id="cert1-verify">
                                 <i class="fas fa-certificate"></i> Verify
                             </a>
                         </div>
@@ -505,7 +564,7 @@
                     <div class="cert-image-container">
                         <img src="assets/tryhackme.jpg" alt="Jr Penetration Tester Certificate" class="cert-image">
                         <div class="cert-overlay">
-                            <a href="#" target="_blank" class="cert-verify-btn">
+                            <a href="#" target="_blank" class="cert-verify-btn" id="cert2-verify">
                                 <i class="fas fa-certificate"></i> Verify
                             </a>
                         </div>
@@ -521,7 +580,7 @@
                     <div class="cert-image-container">
                         <img src="assets/intern.jpg" alt="Cybersecurity Intern Certificate" class="cert-image">
                         <div class="cert-overlay">
-                            <a href="#" target="_blank" class="cert-verify-btn">
+                            <a href="#" target="_blank" class="cert-verify-btn" id="cert3-verify">
                                 <i class="fas fa-certificate"></i> Verify
                             </a>
                         </div>
@@ -537,14 +596,14 @@
                     <div class="cert-image-container">
                         <img src="assets/blob.png" alt="Cybersecurity Awareness Certificate" class="cert-image">
                         <div class="cert-overlay">
-                            <a href="https://www.credly.com/badges/0cb7d85f-a416-4374-8a1d-6e221f374067" target="_blank" class="cert-verify-btn">
+                            <a href="https://www.credly.com/badges/0cb7d85f-a416-4374-8a1d-6e221f374067" target="_blank" class="cert-verify-btn" id="cert4-verify">
                                 <i class="fas fa-certificate"></i> Verify
                             </a>
                         </div>
                     </div>
                     <div class="certification-content">
                         <h3>Cybersecurity Awareness</h3>
-                        <p class="cert-issuer">January 2025</p>
+                        <p class="cert-issuer">Credly</p>
                         <p class="cert-date">Jan 2025</p>
                     </div>
                 </div>
@@ -553,7 +612,7 @@
                     <div class="cert-image-container">
                         <img src="assets/cybersecurity.jpeg" alt="Google Cybersecurity Certificate" class="cert-image">
                         <div class="cert-overlay">
-                            <a href="https://coursera.org/share/bffd1810fde891ec66df565c519e6f48" target="_blank" class="cert-verify-btn">
+                            <a href="https://coursera.org/share/bffd1810fde891ec66df565c519e6f48" target="_blank" class="cert-verify-btn" id="cert5-verify">
                                 <i class="fas fa-certificate"></i> Verify
                             </a>
                         </div>
@@ -569,7 +628,7 @@
                     <div class="cert-image-container">
                         <img src="assets/linux.png" alt="Linux Foundation Certificate" class="cert-image">
                         <div class="cert-overlay">
-                            <a href="https://www.credly.com/badges/3d834c3d-1fe4-40d3-a874-3aecacbc845f/linked_in_profile" target="_blank" class="cert-verify-btn">
+                            <a href="https://www.credly.com/badges/3d834c3d-1fe4-40d3-a874-3aecacbc845f/linked_in_profile" target="_blank" class="cert-verify-btn" id="cert6-verify">
                                 <i class="fas fa-certificate"></i> Verify
                             </a>
                         </div>
@@ -585,7 +644,7 @@
                     <div class="cert-image-container">
                         <img src="assets/PCEP.jpg" alt="PCEP Python Certificate" class="cert-image">
                         <div class="cert-overlay">
-                            <a href="#" target="_blank" class="cert-verify-btn">
+                            <a href="#" target="_blank" class="cert-verify-btn" id="cert7-verify">
                                 <i class="fas fa-certificate"></i> Verify
                             </a>
                         </div>
@@ -601,7 +660,7 @@
                     <div class="cert-image-container">
                         <img src="assets/apisec.jpg" alt="APISec Fundamentals Certificate" class="cert-image">
                         <div class="cert-overlay">
-                            <a href="https://www.credly.com/badges/67f939a0-3ac6-42b9-9d7a-77a7d4bc1fc8/public_url" target="_blank" class="cert-verify-btn">
+                            <a href="https://www.credly.com/badges/67f939a0-3ac6-42b9-9d7a-77a7d4bc1fc8/public_url" target="_blank" class="cert-verify-btn" id="cert8-verify">
                                 <i class="fas fa-certificate"></i> Verify
                             </a>
                         </div>
@@ -617,7 +676,7 @@
                     <div class="cert-image-container">
                         <img src="assets/CTF.jpg" alt="CURTIN University CTF Certificate" class="cert-image">
                         <div class="cert-overlay">
-                            <a href="#" target="_blank" class="cert-verify-btn">
+                            <a href="#" target="_blank" class="cert-verify-btn" id="cert9-verify">
                                 <i class="fas fa-certificate"></i> Verify
                             </a>
                         </div>
@@ -632,26 +691,26 @@
         </div>
     </section>
 
-    <!-- Writeups Section -->
+    <!-- ==============================
+         WRITEUPS SECTION
+    =============================== -->
     <section id="writeups" class="writeups">
+        <div class="bg-grid"></div>
         <div class="container">
             <div class="section-header">
-                <h2>Writeups & Articles</h2>
+                <div class="section-tag"><i class="fas fa-pen-nib"></i> Articles</div>
+                <h2>Writeups &amp; Articles</h2>
                 <div class="underline"></div>
                 <p class="section-description">Technical writeups and cybersecurity insights shared on Medium</p>
             </div>
-            
+
             <div class="writeups-grid">
                 <!-- Writeup Card 1 -->
                 <div class="writeup-card">
                     <div class="writeup-image writeup-image-gradient">
-                        <div class="writeup-icon-large">
-                            <i class="fas fa-flag-checkered"></i>
-                        </div>
+                        <div class="writeup-icon-large"><i class="fas fa-flag-checkered"></i></div>
                         <div class="writeup-overlay">
-                            <div class="overlay-icons">
-                                <i class="fab fa-medium"></i>
-                            </div>
+                            <div class="overlay-icons"><i class="fab fa-medium"></i></div>
                         </div>
                     </div>
                     <div class="writeup-content">
@@ -665,7 +724,7 @@
                             <span><i class="far fa-clock"></i> 6 min read</span>
                             <span><i class="fas fa-eye"></i> Medium</span>
                         </div>
-                        <a href="https://medium.com/@cyberhackrafi/cybertalent-challenge-name-lake-21b67205e1f7" target="_blank" class="writeup-btn">
+                        <a href="https://medium.com/@cyberhackrafi/cybertalent-challenge-name-lake-21b67205e1f7" target="_blank" class="writeup-btn" id="writeup1-read">
                             <span>Read Article</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -675,13 +734,9 @@
                 <!-- Writeup Card 2 -->
                 <div class="writeup-card">
                     <div class="writeup-image writeup-image-gradient writeup-gradient-2">
-                        <div class="writeup-icon-large">
-                            <i class="fas fa-hashtag"></i>
-                        </div>
+                        <div class="writeup-icon-large"><i class="fas fa-hashtag"></i></div>
                         <div class="writeup-overlay">
-                            <div class="overlay-icons">
-                                <i class="fab fa-medium"></i>
-                            </div>
+                            <div class="overlay-icons"><i class="fab fa-medium"></i></div>
                         </div>
                     </div>
                     <div class="writeup-content">
@@ -695,7 +750,7 @@
                             <span><i class="far fa-clock"></i> 5 min read</span>
                             <span><i class="fas fa-eye"></i> Medium</span>
                         </div>
-                        <a href="https://medium.com/@cyberhackrafi/challenge-name-crack-the-hash-d20cff436488" target="_blank" class="writeup-btn">
+                        <a href="https://medium.com/@cyberhackrafi/challenge-name-crack-the-hash-d20cff436488" target="_blank" class="writeup-btn" id="writeup2-read">
                             <span>Read Article</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -705,13 +760,9 @@
                 <!-- Writeup Card 3 -->
                 <div class="writeup-card">
                     <div class="writeup-image writeup-image-gradient writeup-gradient-3">
-                        <div class="writeup-icon-large">
-                            <i class="fas fa-shield-virus"></i>
-                        </div>
+                        <div class="writeup-icon-large"><i class="fas fa-shield-virus"></i></div>
                         <div class="writeup-overlay">
-                            <div class="overlay-icons">
-                                <i class="fab fa-medium"></i>
-                            </div>
+                            <div class="overlay-icons"><i class="fab fa-medium"></i></div>
                         </div>
                     </div>
                     <div class="writeup-content">
@@ -725,7 +776,7 @@
                             <span><i class="far fa-clock"></i> 8 min read</span>
                             <span><i class="fas fa-eye"></i> Medium</span>
                         </div>
-                        <a href="https://medium.com/@cyberhackrafi/vulnerability-capstone-b4ee17a15f65" target="_blank" class="writeup-btn">
+                        <a href="https://medium.com/@cyberhackrafi/vulnerability-capstone-b4ee17a15f65" target="_blank" class="writeup-btn" id="writeup3-read">
                             <span>Read Article</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
@@ -733,9 +784,8 @@
                 </div>
             </div>
 
-            <!-- View All Button -->
             <div class="writeups-footer">
-                <a href="https://medium.com/@cyberhackrafi" target="_blank" class="btn primary-btn view-all-btn">
+                <a href="https://medium.com/@cyberhackrafi" target="_blank" class="btn primary-btn view-all-btn" id="medium-all">
                     <span class="btn-text">View All Articles on Medium</span>
                     <span class="btn-icon"><i class="fab fa-medium"></i></span>
                 </a>
@@ -743,95 +793,130 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ==============================
+         CONTACT SECTION
+    =============================== -->
     <section id="contact" class="contact">
+        <div class="bg-mesh"></div>
         <div class="container">
             <div class="section-header">
+                <div class="section-tag"><i class="fas fa-paper-plane"></i> Contact</div>
                 <h2>Get In Touch</h2>
                 <div class="underline"></div>
+                <p>Have a project or opportunity in mind? Let's connect!</p>
             </div>
             <div class="contact-container">
+                <!-- Contact Info -->
                 <div class="contact-info-container">
                     <div class="contact-info-item">
-                        <div class="icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
                         <div class="text">
                             <h3>Email</h3>
                             <p>mdparvej.ahmedrafi@student.aiu.edu.my</p>
                         </div>
                     </div>
                     <div class="contact-info-item">
-                        <div class="icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
+                        <div class="icon"><i class="fas fa-phone"></i></div>
                         <div class="text">
                             <h3>Phone</h3>
                             <p>+60-176127213</p>
                         </div>
                     </div>
                     <div class="contact-info-item">
-                        <div class="icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
+                        <div class="icon"><i class="fab fa-linkedin"></i></div>
                         <div class="text">
                             <h3>LinkedIn</h3>
-                            <p><a href="https://www.linkedin.com/in/parvej-rafi-ba43a3301/" target="_blank">Connect with me</a></p>
+                            <p><a href="https://www.linkedin.com/in/parvej-rafi-ba43a3301/" target="_blank" id="contact-linkedin">Connect with me</a></p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Contact Form -->
                 <div class="contact-form-container">
                     <form id="contact-form">
                         <div class="form-group">
-                            <input type="text" id="name" placeholder="Your Name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" placeholder="Your Email" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" placeholder="Subject" required>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Project Inquiry" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" placeholder="Your Message" required></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell me about your project or opportunity..." required></textarea>
                         </div>
-                        <button type="submit" class="btn primary-btn">Send Message</button>
+                        <button type="submit" class="btn primary-btn" id="contact-submit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ==============================
+         FOOTER
+    =============================== -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#home"><span>&lt;</span> PR <span>/&gt;</span></a>
+                <div class="footer-logo-block">
+                    <div class="footer-logo">
+                        <a href="#home">
+                            <div class="logo-icon">PR</div>
+                            <span>ParvejRafi</span>
+                        </a>
+                    </div>
+                    <p>Cybersecurity professional dedicated to securing digital landscapes through ethical hacking and security research.</p>
                 </div>
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/in/parvej-rafi-ba43a3301/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/ParvejRafi" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://tryhackme.com/p/cyberhackrafi" target="_blank"><i class="fas fa-shield-alt"></i></a>
+
+                <div class="footer-nav">
+                    <div class="footer-nav-title">Navigation</div>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#writeups">Writeups</a>
+                        <a href="#contact">Contact</a>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#writeups">Writeups</a>
-                    <a href="#contact">Contact</a>
+
+                <div class="footer-social-block">
+                    <div class="footer-social-title">Connect</div>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/parvej-rafi-ba43a3301/" target="_blank" title="LinkedIn" id="footer-linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/ParvejRafi" target="_blank" title="GitHub" id="footer-github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://tryhackme.com/p/cyberhackrafi" target="_blank" title="TryHackMe" id="footer-tryhackme">
+                            <i class="fas fa-shield-alt"></i>
+                        </a>
+                        <a href="https://medium.com/@cyberhackrafi" target="_blank" title="Medium" id="footer-medium">
+                            <i class="fab fa-medium"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 MD PARVEJ AHMED RAFI. All Rights Reserved.</p>
-                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 MD PARVEJ AHMED RAFI. All Rights Reserved. Built with passion for cybersecurity.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Theme toggle -->
-    <div class="theme-toggle">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-    </div>
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
