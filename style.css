@@ -259,14 +259,18 @@ header {
     z-index: 1000;
     transition: var(--transition-base);
     padding: 0;
+    /* Always visible — solid background with separator */
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 12px hsla(220, 30%, 50%, 0.08);
 }
 
 header.scrolled {
-    background: var(--bg-overlay);
-    backdrop-filter: blur(20px) saturate(1.5);
-    -webkit-backdrop-filter: blur(20px) saturate(1.5);
+    background: hsla(0, 0%, 100%, 0.92);
+    backdrop-filter: blur(24px) saturate(1.8);
+    -webkit-backdrop-filter: blur(24px) saturate(1.8);
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 2px 16px hsla(220, 30%, 50%, 0.12);
+    box-shadow: 0 4px 24px hsla(220, 30%, 50%, 0.14);
 }
 
 nav {
@@ -274,34 +278,43 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: var(--nav-height);
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 /* Logo */
 .logo a {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    font-family: var(--font-mono);
-    font-size: 1.2rem;
+    gap: 0.65rem;
+    font-family: var(--font-head);
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--text-primary);
-    letter-spacing: -0.5px;
+    letter-spacing: -0.3px;
+    text-decoration: none;
 }
 
 .logo-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
     border-radius: var(--radius-sm);
-    font-size: 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
     color: #fff;
     font-weight: 800;
-    box-shadow: 0 4px 14px hsla(220, 100%, 65%, 0.4);
+    letter-spacing: -0.5px;
+    box-shadow: 0 3px 10px hsla(220, 90%, 56%, 0.35);
     flex-shrink: 0;
+}
+
+.logo-text {
+    font-family: var(--font-head);
+    font-weight: 700;
+    color: var(--text-primary);
 }
 
 .logo-text span {
@@ -312,41 +325,68 @@ nav {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0;
+    flex: 1;
+    justify-content: center;
 }
 
 .nav-links li a {
-    color: var(--text-secondary);
-    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-size: 0.875rem;
     font-weight: 500;
-    padding: 0.45rem 0.85rem;
+    padding: 0.5rem 0.9rem;
     border-radius: var(--radius-sm);
     transition: var(--transition-base);
     position: relative;
     letter-spacing: 0.1px;
+    white-space: nowrap;
 }
 
-.nav-links li a:hover,
-.nav-links li.active a {
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: calc(100% - 1.4rem);
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: var(--radius-full);
+    transition: transform 0.25s ease;
+    transform-origin: center;
+}
+
+.nav-links li a:hover {
     color: var(--text-primary);
-    background: hsla(220, 90%, 56%, 0.1);
+    background: hsla(220, 90%, 56%, 0.07);
+}
+
+.nav-links li a:hover::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 .nav-links li.active a {
     color: var(--accent-primary);
+    font-weight: 600;
+    background: hsla(220, 90%, 56%, 0.08);
+}
+
+.nav-links li.active a::after {
+    transform: translateX(-50%) scaleX(1);
 }
 
 /* Nav CTA button */
 .nav-cta {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.75rem;
     flex-shrink: 0;
 }
 
 .nav-cta .btn {
-    padding: 0.5rem 1.2rem;
-    font-size: 0.85rem;
+    padding: 0.48rem 1.1rem;
+    font-size: 0.84rem;
+    font-weight: 600;
 }
 
 /* Hamburger */
@@ -355,15 +395,22 @@ nav {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
-    padding: 4px;
+    padding: 6px;
     border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--bg-elevated);
     transition: var(--transition-base);
 }
 
+.hamburger:hover {
+    background: hsla(220, 90%, 56%, 0.08);
+    border-color: var(--border-glow);
+}
+
 .hamburger .line {
-    width: 22px;
+    width: 20px;
     height: 2px;
-    background-color: var(--text-primary);
+    background-color: var(--text-secondary);
     border-radius: 2px;
     transition: var(--transition-base);
 }
