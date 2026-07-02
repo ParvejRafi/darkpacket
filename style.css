@@ -7,31 +7,31 @@
 
 /* ==================== Design Tokens ==================== */
 :root {
-    /* Core Background Palette */
-    --bg-primary:   hsl(222, 25%, 7%);    /* Deep navy-black */
-    --bg-secondary: hsl(222, 22%, 10%);   /* Slightly lighter */
-    --bg-card:      hsl(222, 20%, 12%);   /* Card surfaces */
-    --bg-elevated:  hsl(222, 18%, 15%);   /* Elevated elements */
-    --bg-overlay:   hsla(222, 25%, 5%, 0.85);
+    /* Core Background Palette — Clean Light */
+    --bg-primary:   hsl(220, 30%, 97%);   /* Off-white with blue tint */
+    --bg-secondary: hsl(220, 25%, 93%);   /* Soft light gray */
+    --bg-card:      hsl(0, 0%, 100%);     /* Pure white cards */
+    --bg-elevated:  hsl(220, 22%, 89%);   /* Slightly deeper gray */
+    --bg-overlay:   hsla(220, 30%, 97%, 0.92);
 
     /* Accent Colors */
-    --accent-primary:   hsl(220, 100%, 65%);   /* Royal blue */
-    --accent-secondary: hsl(265, 90%, 70%);    /* Soft violet */
-    --accent-glow:      hsl(220, 100%, 60%);
-    --accent-cyan:      hsl(185, 90%, 60%);    /* Subtle cyan for security feel */
-    --accent-green:     hsl(155, 70%, 55%);    /* Success green */
-    --accent-amber:     hsl(38, 95%, 60%);     /* Warning amber */
+    --accent-primary:   hsl(220, 90%, 56%);    /* Vivid royal blue */
+    --accent-secondary: hsl(265, 80%, 60%);    /* Deep violet */
+    --accent-glow:      hsl(220, 90%, 50%);
+    --accent-cyan:      hsl(195, 85%, 42%);    /* Teal-cyan for security feel */
+    --accent-green:     hsl(155, 65%, 38%);    /* Success green */
+    --accent-amber:     hsl(38, 95%, 48%);     /* Warning amber */
 
-    /* Text */
-    --text-primary:   hsl(210, 40%, 96%);
-    --text-secondary: hsl(210, 20%, 75%);
-    --text-muted:     hsl(215, 15%, 52%);
-    --text-subtle:    hsl(215, 12%, 38%);
+    /* Text — Dark for light backgrounds */
+    --text-primary:   hsl(222, 45%, 10%);  /* Very dark navy */
+    --text-secondary: hsl(220, 20%, 28%);  /* Dark slate */
+    --text-muted:     hsl(215, 15%, 48%);  /* Medium gray */
+    --text-subtle:    hsl(215, 12%, 62%);  /* Light gray */
 
     /* Borders */
-    --border-color:   hsla(215, 30%, 35%, 0.35);
-    --border-glow:    hsla(220, 100%, 65%, 0.3);
-    --border-hover:   hsla(220, 100%, 65%, 0.6);
+    --border-color:   hsla(215, 25%, 70%, 0.55);
+    --border-glow:    hsla(220, 90%, 56%, 0.35);
+    --border-hover:   hsla(220, 90%, 56%, 0.65);
 
     /* Typography */
     --font-sans:  'Inter', system-ui, sans-serif;
@@ -45,12 +45,12 @@
     --radius-xl:  24px;
     --radius-full: 9999px;
 
-    /* Shadows */
-    --shadow-sm:  0 2px 8px hsla(222, 40%, 2%, 0.6);
-    --shadow-md:  0 8px 32px hsla(222, 40%, 2%, 0.5);
-    --shadow-lg:  0 24px 64px hsla(222, 40%, 2%, 0.6);
-    --shadow-glow: 0 0 30px hsla(220, 100%, 65%, 0.25);
-    --shadow-card: 0 4px 24px hsla(222, 40%, 2%, 0.45), inset 0 1px 0 hsla(210, 40%, 96%, 0.04);
+    /* Shadows — softer for light surfaces */
+    --shadow-sm:  0 2px 8px hsla(220, 30%, 50%, 0.10);
+    --shadow-md:  0 8px 32px hsla(220, 30%, 50%, 0.13);
+    --shadow-lg:  0 24px 64px hsla(220, 30%, 50%, 0.16);
+    --shadow-glow: 0 0 28px hsla(220, 90%, 56%, 0.22);
+    --shadow-card: 0 4px 24px hsla(220, 30%, 50%, 0.10), inset 0 1px 0 hsla(0, 0%, 100%, 0.9);
 
     /* Transitions */
     --transition-fast: 0.15s ease;
@@ -78,11 +78,11 @@
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: var(--accent-primary) var(--bg-secondary);
+    scrollbar-color: var(--accent-primary) var(--bg-elevated);
 }
 
 ::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-track { background: var(--bg-elevated); }
 ::-webkit-scrollbar-thumb { background: var(--accent-primary); border-radius: var(--radius-full); }
 
 body {
@@ -235,8 +235,8 @@ section { position: relative; overflow: hidden; }
     position: absolute;
     inset: 0;
     background-image:
-        radial-gradient(ellipse 60% 50% at 20% 10%, hsla(220, 100%, 65%, 0.05) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 40% at 80% 80%, hsla(265, 90%, 70%, 0.04) 0%, transparent 60%);
+        radial-gradient(ellipse 60% 50% at 20% 10%, hsla(220, 90%, 56%, 0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 80% 80%, hsla(265, 80%, 60%, 0.05) 0%, transparent 60%);
     pointer-events: none;
 }
 
@@ -244,8 +244,8 @@ section { position: relative; overflow: hidden; }
     position: absolute;
     inset: 0;
     background-image:
-        linear-gradient(hsla(215, 30%, 60%, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, hsla(215, 30%, 60%, 0.04) 1px, transparent 1px);
+        linear-gradient(hsla(215, 30%, 55%, 0.09) 1px, transparent 1px),
+        linear-gradient(90deg, hsla(215, 30%, 55%, 0.09) 1px, transparent 1px);
     background-size: 48px 48px;
     pointer-events: none;
 }
@@ -266,7 +266,7 @@ header.scrolled {
     backdrop-filter: blur(20px) saturate(1.5);
     -webkit-backdrop-filter: blur(20px) saturate(1.5);
     border-bottom: 1px solid var(--border-color);
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 2px 16px hsla(220, 30%, 50%, 0.12);
 }
 
 nav {
@@ -329,7 +329,7 @@ nav {
 .nav-links li a:hover,
 .nav-links li.active a {
     color: var(--text-primary);
-    background: hsla(220, 100%, 65%, 0.1);
+    background: hsla(220, 90%, 56%, 0.1);
 }
 
 .nav-links li.active a {
@@ -386,7 +386,7 @@ nav {
     right: -10%;
     width: 700px;
     height: 700px;
-    background: radial-gradient(circle, hsla(220, 100%, 65%, 0.07) 0%, transparent 70%);
+    background: radial-gradient(circle, hsla(220, 90%, 56%, 0.10) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -397,7 +397,7 @@ nav {
     left: -5%;
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, hsla(265, 90%, 70%, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, hsla(265, 80%, 60%, 0.08) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -455,7 +455,7 @@ nav {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--text-primary) 0%, hsl(210, 60%, 88%) 100%);
+    background: linear-gradient(135deg, var(--text-primary) 0%, hsl(220, 60%, 30%) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -657,7 +657,7 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 3px;
     background: linear-gradient(90deg, transparent, var(--accent-primary), var(--accent-secondary), transparent);
 }
 
@@ -1642,9 +1642,9 @@ nav {
     justify-content: center;
 }
 
-.writeup-image-gradient   { background: linear-gradient(135deg, hsl(220,85%,30%) 0%, hsl(260,70%,25%) 100%); }
-.writeup-gradient-2 { background: linear-gradient(135deg, hsl(155,70%,18%) 0%, hsl(185,80%,18%) 100%); }
-.writeup-gradient-3 { background: linear-gradient(135deg, hsl(265,70%,22%) 0%, hsl(300,60%,18%) 100%); }
+.writeup-image-gradient   { background: linear-gradient(135deg, hsl(220,85%,42%) 0%, hsl(260,70%,38%) 100%); }
+.writeup-gradient-2 { background: linear-gradient(135deg, hsl(155,65%,30%) 0%, hsl(185,75%,28%) 100%); }
+.writeup-gradient-3 { background: linear-gradient(135deg, hsl(265,68%,36%) 0%, hsl(300,58%,32%) 100%); }
 
 .writeup-icon-large {
     font-size: 4.5rem;
@@ -1668,7 +1668,7 @@ nav {
 .writeup-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, transparent 40%, hsla(222, 25%, 7%, 0.8) 100%);
+    background: linear-gradient(to bottom, transparent 40%, hsla(222, 40%, 12%, 0.75) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
