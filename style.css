@@ -1104,7 +1104,7 @@ nav {
 /* ==================== SKILLS SECTION ==================== */
 .skills {
     padding: var(--space-xl) 0;
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
 }
 
 .skills-container {
@@ -1180,7 +1180,7 @@ nav {
 /* ==================== PROJECTS SECTION ==================== */
 .projects {
     padding: var(--space-xl) 0;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .projects-grid {
@@ -1312,12 +1312,12 @@ nav {
 /* ==================== EXPERIENCE & EDUCATION ==================== */
 .experience {
     padding: var(--space-xl) 0;
-    background: var(--bg-primary);
+    background: var(--bg-secondary);
 }
 
 .education {
     padding: var(--space-xl) 0;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .timeline {
@@ -1469,6 +1469,20 @@ nav {
 
 /* ==================== CERTIFICATIONS SECTION ==================== */
 .certifications {
+    padding: var(--space-xl) 0;
+    background: var(--bg-primary);
+    position: relative;
+}
+
+/* ==================== RESEARCH PUBLICATIONS SECTION ==================== */
+.publications {
+    padding: var(--space-xl) 0;
+    background: var(--bg-secondary);
+    position: relative;
+}
+
+/* ==================== CORPORATE WORKSHOP TRAINING SECTION ==================== */
+.workshops {
     padding: var(--space-xl) 0;
     background: var(--bg-primary);
     position: relative;
