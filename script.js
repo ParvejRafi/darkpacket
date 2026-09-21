@@ -131,7 +131,7 @@ function revealElements() {
 function initReveal() {
     const targets = document.querySelectorAll(
         '.project-card, .certification-card, .writeup-card, .skill-category, ' +
-        '.timeline-item, .expertise-card, .contact-info-item, .stat-item'
+        '.timeline-item, .expertise-card, .contact-info-item, .stat-item, .publication-card, .workshop-gallery-img'
     );
     targets.forEach((el, i) => {
         el.classList.add('reveal');
